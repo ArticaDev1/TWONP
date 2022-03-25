@@ -168,21 +168,4 @@ gulp.task("default", gulp.series("clean",
   gulp.parallel("watch", "serve")
 ));
 
-//gulp deploy
-gulp.task("deploy", function () {
-  return gulp.src('./dest/**')
-    .pipe(rsync({
-      root: './dest/',
-      hostname: '92.53.96.37',
-      destination: '/home/c/ct60473/public_html/assets/components/project/dest',
-      username: 'ct60473',
-      archive: true,
-      silent: false,
-      compress: true
-  }));
-});
-
-//Qmt7usfjXrxg
-
-
 
